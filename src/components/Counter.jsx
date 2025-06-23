@@ -20,8 +20,8 @@ export default function Counter() {
     <div className="text-center h-full">
       <div className="stats bg-gray-800 border-base-300 border mt-5.5">
         <div className="stat">
-          <div className="stat-title text-center text-2xl">Counter</div>
-          <div className="stat-value text-center">{count}</div>
+          <div className="stat-title text-center text-2xl text-white">Counter</div>
+          <div className="stat-value text-center text-white">{count}</div>
           <div className="flex justify-between">
             <IncreaseBtn clickInc={handleIncrease} />
           <DecreaseBtn clickDec={handleDecrease} />
