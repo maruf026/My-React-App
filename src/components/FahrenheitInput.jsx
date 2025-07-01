@@ -8,7 +8,7 @@ export default function FahrenheitInput({ handleInput, value }) {
         type="number"
         value={value}
         onChange={(e) => handleInput(e.target.value)}
-        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400 text-white-900 placeholder-gray-400"
         placeholder="32 °F"
       />
     </div>
