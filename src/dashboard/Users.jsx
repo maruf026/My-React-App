@@ -118,8 +118,8 @@ const Inbox = () => {
     setSidebarOpen(false);
   };
 
-  const handleDeleteEmail = (emailId, event) => {
-    event.stopPropagation();
+  const handleDeleteEmail = (emailId) => {
+   
     const updatedUsers = users.filter(email => email.id !== emailId);
     const updatedFiltered = filteredEmails.filter(email => email.id !== emailId);
     
