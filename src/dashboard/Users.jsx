@@ -372,24 +372,7 @@ const Inbox = () => {
               </div>
             )}
 
-            {/* Pagination */}
-            {filteredEmails.length > 0 && (
-              <div className="border-t border-gray-200 dark:border-gray-700 px-3 lg:px-4 py-3 bg-gray-50 dark:bg-gray-700">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                  <p className="text-sm text-gray-500 dark:text-gray-400 text-center sm:text-left">
-                    Showing 1-{Math.min(filteredEmails.length, 12)} of {filteredEmails.length}
-                  </p>
-                  <div className="flex items-center justify-center gap-2">
-                    <button className="p-1.5 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600 rounded transition-colors duration-200">
-                      <FaChevronLeft className="text-sm" />
-                    </button>
-                    <button className="p-1.5 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600 rounded transition-colors duration-200">
-                      <FaChevronRight className="text-sm" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
+         
           </div>
         </div>
       </div>
