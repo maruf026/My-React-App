@@ -1,15 +1,16 @@
-import Counter from "./components/Counter";
-import Form from "./components/Form";
-import ProductList from "./components/ProductList";
-import Team from "./components/TeamMembers";
-import Temperature from "./components/Temp";
+import React from 'react'
+import { Link } from 'react-router'
 
-import Todo from "./components/Todo";
-
-export default function App(){
-    return (
-        <>
-      <Temperature/>
-        </>
-    );
+function App() {
+  return (
+    <div>
+      <nav className='flex gap-2'>
+        <a href="">Contact</a>
+        <Link to="/posts">Posts</Link>
+        <a href="">Blogs</a>
+      </nav>
+    </div>
+  )
 }
+
+export default App

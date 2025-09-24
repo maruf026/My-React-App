@@ -1,2 +1,71 @@
 @import "tailwindcss";
-@plugin "daisyui";
+/* @plugin "daisyui"; */
+
+@layer utilities {
+  .section-container {
+    @apply max-w-screen-2xl container mx-auto py-6 px-4;
+  }
+}
+
+
+
+
+/* Define custom variant for dark mode using class strategy */
+@variant dark (&:where(.dark, .dark *));
+
+/* Base styles */
+@layer base {
+  * {
+    transition-property: color, background-color, border-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+  }
+  
+  /* Dark mode styles for scrollbars */
+  .dark {
+    color-scheme: dark;
+  }
+
+  /* Custom scrollbar for dark mode */
+  .dark::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .dark::-webkit-scrollbar-track {
+    background: #374151;
+  }
+
+  .dark::-webkit-scrollbar-thumb {
+    background: #6b7280;
+    border-radius: 4px;
+  }
+
+  .dark::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+}
+
+/* Custom theme configuration (optional) */
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-900: #1e3a8a;
+}
+/* 2. Alternative: Media Query Strategy (Auto Dark Mode)
+If you prefer system preference detection without manual toggle: */
+
+/* css
+@import "tailwindcss"; */
+
+/* This will automatically follow system dark/light preferences */
+/* No @variant needed - uses default media query strategy */
+
+@layer base {
+  * {
+    transition-property: color, background-color, border-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+  }
+}
